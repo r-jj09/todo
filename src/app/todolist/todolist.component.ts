@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, NgForm } from '@angular/forms';
 import { NgStyle } from '@angular/common';
 
@@ -9,7 +9,8 @@ import { NgStyle } from '@angular/common';
 })
 export class TodolistComponent {
 
-  taskArray = [{taskName: null, isCrossedOut: false}]
+
+  taskArray = [{taskName: 'Clean', isCrossedOut: false}]
   onSubmit(form: NgForm){
     this.taskArray.push({
       taskName: form.controls['task'].value,
