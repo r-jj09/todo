@@ -6,6 +6,12 @@ h1{
 hr{
     border: solid 1px black ;
 }
+input{
+    margin-bottom: 5px;
+}
+td{
+    font-weight: bold;
+}
 .label{
     margin: 0.5rem;
 }
@@ -17,6 +23,7 @@ hr{
         visibility: hidden;
     }
 }
-.btn-success{
-    margin-top: 10px;
-}
+.crossed-out {
+    text-decoration: line-through;
+    color: green;
+  }

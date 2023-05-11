@@ -9,19 +9,19 @@ import { NgStyle } from '@angular/common';
 })
 export class TodolistComponent {
 
-  taskArray = [{taskName: 'clean' , isComplete: false }]
+  taskArray = [{taskName: null, isCrossedOut: false}]
   onSubmit(form: NgForm){
     this.taskArray.push({
       taskName: form.controls['task'].value,
-      isComplete: false,
+      isCrossedOut: false,
     })
     form.reset();
   }
   onDelete(index: number){
     this.taskArray.splice(index, 1);
   }
-  onCheck(index: number){
-    this.taskArray[index].isComplete = !this.taskArray[index].isComplete
+  toggleCrossedOut(index: number){
+    this.taskArray[index].isCrossedOut = !this.taskArray[index].isCrossedOut;
   }
 };
 

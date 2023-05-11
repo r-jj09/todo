@@ -10,11 +10,11 @@
                 Required field!
             </div>
         </div>
-        <button [disabled]="taskForm.invalid" type="submit" class="btn btn-success">Submit
+        <button [disabled]="taskForm.invalid" type="submit" class="btn btn-primary">Submit
         </button>
     </form>
     <hr>
-    <table class="table table-responsive-md">
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">Task</th>
@@ -24,10 +24,11 @@
         </thead>
         <tbody>
             <tr *ngFor="let t of taskArray ; index as i">
-                <td>{{t.taskName}}</td>
-                <td> <input (change)="onCheck(i)" class="check" type="checkbox"></td>
+                <td [ngClass]="{'crossed-out': t.isCrossedOut}">{{t.taskName}}</td>
+                <td><button class="btn btn-success btn-sm" (click)="toggleCrossedOut(i)">Done
+                        <i class="fa fa-check"></i></button></td>
                 <td><button class="btn btn-danger btn-sm" (click)="onDelete(i)">Delete
-                        <i class="fa-regular fa-trash-can"></i></button></td>
+                        <i class="fa fa-trash-can"></i></button></td>
             </tr>
         </tbody>
     </table>
