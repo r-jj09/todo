@@ -10,7 +10,7 @@ import { NgStyle } from '@angular/common';
 export class TodolistComponent {
 
 
-  taskArray = [{taskName: 'Clean', isCrossedOut: false}]
+  taskArray: { taskName: string, isCrossedOut: boolean }[] = [];
   onSubmit(form: NgForm){
     this.taskArray.push({
       taskName: form.controls['task'].value,

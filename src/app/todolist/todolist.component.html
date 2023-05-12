@@ -5,7 +5,7 @@
             <label class="label" for="task">Task</label>
             <input required pattern="^[a-zA-Z ]{3,20}$" type="task" class="form-control" id="task"
                 placeholder="Enter task" ngModel name="task">
-            <div *ngIf="taskForm.invalid && taskForm.dirty" class="error-message">
+            <div *ngIf="taskForm.invalid && taskForm.dirty && taskForm.touched" class="error-message">
                 Required field!
             </div>
         </div>

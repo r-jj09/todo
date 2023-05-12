@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     TodolistComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
