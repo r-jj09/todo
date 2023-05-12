@@ -1,10 +1,9 @@
 <script src="https://kit.fontawesome.com/c007afa4a8.js" crossorigin="anonymous"></script>
 <div class="container">
-    <h1>To-Do List</h1>
     <form (ngSubmit)="onSubmit(taskForm)" #taskForm="ngForm">
         <div class="form-group">
             <label class="label" for="task">Task</label>
-            <input required pattern="^[a-zA-Z ]{1,20}$" type="task" class="form-control" id="task"
+            <input required pattern="^[a-zA-Z ]{3,20}$" type="task" class="form-control" id="task"
                 placeholder="Enter task" ngModel name="task">
             <div *ngIf="taskForm.invalid && taskForm.dirty" class="error-message">
                 Required field!
